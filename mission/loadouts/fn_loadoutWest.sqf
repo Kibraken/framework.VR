@@ -14,6 +14,7 @@ _basicMedicMedicine = [["ACE_fieldDressing", 40], ["ACE_morphine", 20], ["ACE_sp
 
 _medicMedicine = _basicMedicMedicine;
 
+/* Uniforms */
 private _uniform = "U_B_CombatUniform_mcam";
 private _vest = "V_BandollierB_rgr";
 _riflemanFashion = [_uniform, _vest, "H_HelmetB_sand", "B_Kitbag_cbr", ""];
@@ -22,10 +23,28 @@ _leaderFashion = [_uniform, _vest, "H_MilCap_mcamo", "B_Kitbag_cbr", ""];
 _pilotFashion = [_uniform, _vest, "H_PilotHelmetHeli_B", "B_Kitbag_cbr", ""];
 _crewFashion = [_uniform, _vest, "H_HelmetCrew_B", "B_Kitbag_cbr", ""];
 
+_glFashion = _riflemanFashion;
+_atSpecFashion = _specFashion;
+_RATFashion = _riflemanFashion;
+_mgFashion = _riflemanFashion;
+_medicFashion = _specFashion;
+_engineerFashion = _specFashion;
+_marksmanFashion = _riflemanFashion;
+_teamLeaderFashion = _riflemanFashion;
+
+/* Weapons */
 _riflemanPrimary = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 15]], []];
 _specPrimary = ["arifle_MXC_F", [["30Rnd_65x39_caseless_mag", 15]], []];
 _glRifleWeapon = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 15], ["1Rnd_HE_Grenade_shell", 15]], ["optic_Aco"]];
 _leaderPrimary = _glRifleWeapon;
+
+_marksmanPrimary = _specPrimary;
+_crewWeapons = _specPrimary;
+_teamLeadPrimary = _leaderPrimary;
+_medicWeapon = _specPrimary;
+_engineerWeapon = _specPrimary;
+_atSpecPrimary = _specPrimary;
+_ratPrimary = _riflemanPrimary;
 
 private _mgMag = "100Rnd_65x39_caseless_mag_Tracer";
 _mgWeapon = ["arifle_MX_SW_F", [[_mgMag, 15]], ["bipod_01_F_snd"]];
@@ -45,7 +64,9 @@ _binoculars = ["ACE_VectorDay", [], []];
 private _additionGrenade = "SmokeShellBlue";
 private _fragGrenade = "HandGrenade";
 
-_items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_additionGrenade, 3],[_fragGrenade,2],["ACE_EntrenchingTool",1],["ACE_MapTools",1], ["ACE_CableTie", 2], ["ACE_DAGR", 1]];
+_gpsTracker = ["ACE_DAGR", 1]; // Commonly used GPS : ACE_DAGR, ACE_microDAGR, ItemGPS
+
+_items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_additionGrenade, 3],[_fragGrenade,2],["ACE_EntrenchingTool",1],["ACE_MapTools",1], ["ACE_CableTie", 2], _gpsTracker];
 _linkItems = ["ItemMap", "ItemCompass", "ItemWatch", "NVGoggles"];
 
 _boxItems = [
